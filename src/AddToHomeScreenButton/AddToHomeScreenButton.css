@@ -1,0 +1,49 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+    background-color: rgba(251, 192, 192, 0.868);
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 20px;
+    color: black;
+}
+.popup-text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.popup-text p{
+    margin: 10px;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.close-button {
+    width: 50%;
+    background-color: transparent;
+    border: 0;
+    border-left: 1px solid black;
+}
+
+.close-button:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.add-button {
+    width: 50%;
+    padding: 5px;
+    background-color: transparent;
+    border: 0 solid transparent;
+    border-right: 1px solid black;
+}
+.add-button:hover{
+    cursor: pointer;
+}
