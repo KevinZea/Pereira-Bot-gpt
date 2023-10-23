@@ -1,43 +1,51 @@
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-.app{
+
+.app {
   margin: 0;
   padding: 0;
   display: flex;
   width: 100%;
   height: 100vh;
 }
-.col-princ{
+
+.col-princ {
   background-color: rgb(0, 53, 6);
   width: 10%;
 }
-.col-title{
+
+.col-title {
   width: 100%;
   padding: 5px;
   color: white;
   margin-top: 20px;
 }
-.col-title h1{
+
+.col-title h1 {
   font-size: 24px;
 }
-.col-icons{
+
+.col-icons {
   color: white;
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
-.col-icon-item{
+
+.col-icon-item {
   background-color: rgb(0, 67, 8);
   padding: 10px;
   border-radius: 100%;
   margin: 10px;
 }
-.col-publi{
+
+.col-publi {
   width: 20%;
   background-color: rgb(0, 67, 8);
   display: flex;
@@ -45,21 +53,25 @@ html, body {
   align-items: center;
   border: 1px solid white;
 }
-.col-publi-img{
+
+.col-publi-img {
   padding: 10px;
   width: 80%;
   height: auto;
 }
-.col-publi-img img{
+
+.col-publi-img img {
   width: 100%;
   height: 100%;
 }
-.body{
+
+.body {
   width: 70%;
   /* height: 100%; */
   flex: 1;
 }
-.body-head{
+
+.body-head {
   display: flex;
   background-color: rgb(0, 67, 8);
   width: 100%;
@@ -68,46 +80,56 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-.body-title{
+
+.body-title {
   display: flex;
   height: 100%;
   padding: 5px;
   justify-content: center;
   align-items: center;
 }
-.body-icons{
+
+.body-icons {
   position: relative;
   left: 20%;
   display: flex;
 }
-.body-title h1{
+
+.body-title h1 {
   margin-left: 10px;
 }
-.body-icons-item{
+
+.body-icons-item {
   margin-left: 30px;
 }
-.body-container{
+
+.body-container {
   width: 100%;
   height: 100%;
 }
-.body-chat{
+
+.body-chat {
   height: 80%;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.body-image{
+
+.body-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 91%;
   background-image: url('./resources/background.png');
-  background-size: cover; /* Ajusta la imagen de fondo al tamaño del contenedor sin deformarla */
-  filter: brightness(0.3); /* Ajusta el brillo. 0.5 reduce a la mitad el brillo. Puedes ajustar este valor según tus necesidades. */
+  background-size: cover;
+  /* Ajusta la imagen de fondo al tamaño del contenedor sin deformarla */
+  filter: brightness(0.3);
+  /* Ajusta el brillo. 0.5 reduce a la mitad el brillo. Puedes ajustar este valor según tus necesidades. */
   z-index: -1;
 }
-.chat-container{
+
+.chat-container {
   width: 95%;
   display: flex;
   color: white;
@@ -115,34 +137,41 @@ html, body {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-.chat-large{
-}
-.chat-fill{
+
+.chat-large {}
+
+.chat-fill {
   display: flex;
 }
+
 .chat-triangulo {
-  color:  #00FF00;
+  color: #00FF00;
   position: relative;
   top: 4vh;
   left: 4%;
   z-index: -1;
 }
-.chat-square{
+
+.chat-square {
   background: linear-gradient(to bottom, #007200, #00FF00);
   padding: 10px;
   border-radius: 10px;
 }
-.chat-icon{
+
+.chat-icon {
   display: flex;
   align-items: end;
 }
-.chat-time{
+
+.chat-time {
   position: relative;
   font-size: 14px;
   margin-top: 5px;
   margin-left: 20px;
 }
-.chat-container-user{
+
+.chat-container-user {
+  width: 100%;
   display: flex;
   color: white;
   margin-top: 20px;
@@ -150,19 +179,22 @@ html, body {
   justify-content: end;
   margin-bottom: 10px;
 }
+
 .chat-triangulo-user {
-  color:  #00FF00;
+  color: #00FF00;
   position: relative;
   top: 4vh;
   right: 6%;
   z-index: -1;
 }
-.chat-time-user{
+
+.chat-time-user {
   font-size: 14px;
   margin-top: 5px;
-  
+
 }
-.inputs{
+
+.inputs {
   background-color: rgb(0, 53, 6);
   display: flex;
   padding: 10px;
@@ -173,22 +205,79 @@ html, body {
   border: 2px solid white;
   display: flex;
 }
-.inputs input{
+
+.inputs input {
   background-color: rgb(0, 67, 8);
   width: 85%;
   color: white;
 }
-.input-audio{
+
+.input-audio {
   background-color: rgb(0, 67, 8);
   color: red;
   padding: 5px;
   border-radius: 100%;
   margin-left: 10px;
 }
-.input-send{
+
+.input-send {
   background-color: rgb(0, 67, 8);
   padding: 5px;
   border-radius: 90%;
   margin-left: 10px;
   color: white;
+}
+
+@media (max-width: 600px) {
+  .app {
+    display: block;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .col-princ {
+    display: none;
+  }
+
+  .body {
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .body-head {
+    position: absolute;
+    top: 0;
+    border-bottom: 2px solid white;
+  }
+
+  .body-icons {
+    left: 0;
+  }
+
+  .col-publi {
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+  }
+
+  .col-publi-img {
+    width: 35%;
+    margin-left: 10%;
+  }
+
+  .inputs {
+    width: 100%;
+  }
+
+  .body-image {
+    height: 100%;
+  }
+
+  .body-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100%;
+    word-break: break-word;
+  }
 }

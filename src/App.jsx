@@ -12,6 +12,26 @@ function App() {
   const [prompt, setPrompt] = useState('')
   const chatContainerRef = useRef(null);
 
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   function promptHandle(e) {
     setPrompt(e.target.value)
   }
@@ -126,7 +146,7 @@ function App() {
 
         </div>
         <div className='body-container'>
-          <div className='body-chat'ref={chatContainerRef}>
+          <div className='body-chat' ref={chatContainerRef}>
             <div className='body-image'></div>
             {chats.length > 0 && (
               chats.map((c) => {
@@ -212,6 +232,7 @@ function App() {
           </div>
         </div>
       </div>
+      <AddToHomeScreenButton />
     </div>
     // <div className='app'>
     //   <nav className='navbar'>
