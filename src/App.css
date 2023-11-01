@@ -39,7 +39,7 @@ body {
 }
 
 .col-icon-item {
-  background-color: rgb(0, 67, 8);
+  background-color: #008069;
   padding: 10px;
   border-radius: 100%;
   margin: 10px;
@@ -47,23 +47,14 @@ body {
 
 .col-publi {
   width: 20%;
-  background-color: rgb(0, 67, 8);
+  background-color: #008069;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid white;
 }
 
-.col-publi-img {
-  padding: 10px;
-  width: 80%;
-  height: auto;
-}
 
-.col-publi-img img {
-  width: 100%;
-  height: 100%;
-}
 
 .body {
   width: 70%;
@@ -73,18 +64,27 @@ body {
 
 .body-head {
   display: flex;
-  background-color: rgb(0, 67, 8);
+  background-color: #008069;
   width: 100%;
   height: 10%;
   color: white;
   justify-content: center;
   align-items: center;
 }
+.body-title img{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  right: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
 
 .body-title {
   display: flex;
   height: 100%;
   padding: 5px;
+  padding-left: 0;
   justify-content: center;
   align-items: center;
 }
@@ -96,11 +96,17 @@ body {
 }
 
 .body-title h1 {
-  margin-left: 10px;
+  position: relative;
+  top: 5px;
+  right: 50px;
+  font-size: 22px;
+  font-weight: normal;
 }
 
 .body-icons-item {
-  margin-left: 30px;
+  margin-left: 50px;
+  position: relative;
+  left: 20px;
 }
 
 .body-container {
@@ -109,7 +115,7 @@ body {
 }
 
 .body-chat {
-  height: 80%;
+  height: 100%;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -121,81 +127,68 @@ body {
   left: 0;
   width: 100%;
   height: 91%;
-  background-image: url('./resources/background.png');
+  background-image: url('./resources/background.webp');
   background-size: cover;
-  /* Ajusta la imagen de fondo al tamaño del contenedor sin deformarla */
-  filter: brightness(0.3);
-  /* Ajusta el brillo. 0.5 reduce a la mitad el brillo. Puedes ajustar este valor según tus necesidades. */
   z-index: -1;
 }
 
 .chat-container {
   width: 95%;
   display: flex;
-  color: white;
-  margin-top: 20px;
+  color: black;
+  margin-top: 10px;
   margin-left: 10px;
-  margin-bottom: 10px;
+  align-items: center;
+}
+.chat-message{
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 7px;
 }
 
-.chat-large {}
-
-.chat-fill {
-  display: flex;
+.chat-foto img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
 }
-
-.chat-triangulo {
-  color: #00FF00;
-  position: relative;
-  top: 4vh;
-  left: 4%;
-  z-index: -1;
+.chat-foto{
+  width: 40px;
+  height: 40px;
 }
-
-.chat-square {
-  background: linear-gradient(to bottom, #007200, #00FF00);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.chat-icon {
-  display: flex;
-  align-items: end;
-}
-
-.chat-time {
-  position: relative;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-left: 20px;
+.chat-time{
+  font-size: 13px;
+  width: 90px;
+  color: gray;
+  margin-left: 5px;
+  height: max-content;
 }
 
 .chat-container-user {
-  width: 100%;
   display: flex;
-  color: white;
-  margin-top: 20px;
+  width: 100%;
+  color: black;
+  margin-top: 10px;
   margin-right: 10px;
   justify-content: end;
-  margin-bottom: 10px;
 }
-
-.chat-triangulo-user {
-  color: #00FF00;
-  position: relative;
-  top: 4vh;
-  right: 6%;
-  z-index: -1;
+.chat-message-user{
+  background-color: #dae9cf;
+  border-radius: 20px;
+  padding: 7px;
 }
 
 .chat-time-user {
+  height: max-content;
+  font-size: 13px;
+  width: 60px;
+  color: gray;
   font-size: 14px;
-  margin-top: 5px;
-
+  margin-right:10px;
 }
 
 .inputs {
-  background-color: rgb(0, 53, 6);
+  background-color: rgba(0, 53, 6, 0);
   display: flex;
   padding: 10px;
   height: max-content;
@@ -207,21 +200,23 @@ body {
 }
 
 .inputs input {
-  background-color: rgb(0, 67, 8);
+  background-color: white;
   width: 85%;
-  color: white;
+  color: #bfbfbf;
+  border-radius: 25px;
+  padding-left: 10px;
 }
 
 .input-audio {
-  background-color: rgb(0, 67, 8);
-  color: red;
-  padding: 5px;
+  background-color: #008069;
+  color: white;
+  padding: 10px;
   border-radius: 100%;
   margin-left: 10px;
 }
 
 .input-send {
-  background-color: rgb(0, 67, 8);
+  background-color: #008069;
   padding: 5px;
   border-radius: 90%;
   margin-left: 10px;
@@ -257,10 +252,18 @@ body {
 
   .col-publi {
     width: 100%;
-    height: 20%;
+    height: 250px;
     flex-direction: row;
+    align-items: end;
+    position: fixed;
   }
+  .col-publi img{
+    width: 100%;
+    height: 100%;
+  }
+  #carouselExampleInterval{
 
+  }
   .col-publi-img {
     width: 35%;
     margin-left: 10%;
@@ -279,5 +282,9 @@ body {
     overflow-x: hidden;
     max-height: 100%;
     word-break: break-word;
+  }
+  .body-chat{
+    margin-top: 250px;
+    height: 58vh;
   }
 }
