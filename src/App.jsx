@@ -150,7 +150,7 @@ function App() {
         <div className='body-head'>
           <div className='body-title'>
             <img src={foto} alt="" srcset="" />
-            <h1>PereiraBot</h1>
+            <h1>Dani Pereira Bot</h1>
           </div>
           <div className='body-icons'>
 
