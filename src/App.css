@@ -119,9 +119,10 @@ body {
   background-color: white;
   border-radius: 20px;
   padding: 7px;
+  white-space: pre-line;
 }
 .chat-message span{
-  white-space: break-spaces;
+  word-break: break-word;
 }
 .chat-foto img{
   width: 100%;
