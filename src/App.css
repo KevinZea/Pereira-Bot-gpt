@@ -265,11 +265,14 @@ body {
 
 
   .inputs {
+    background-color: transparent;
     width: 100%;
   }
 
   .body-image {
     height: 100%;
+    background-size: cover;
+    background-repeat: repeat-y;
   }
 
   .body-container {

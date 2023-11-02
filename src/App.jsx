@@ -164,8 +164,8 @@ function App() {
 
         </div>
         <div className='body-container'>
+          <div className='body-image'></div>
           <div className='body-chat' ref={chatContainerRef}>
-            <div className='body-image'></div>
             {chats.length > 0 && (
               chats.map((c) => {
                 return (
@@ -227,7 +227,7 @@ function App() {
       </div>
       <AddToHomeScreenButton />
     </div>
-   
+
   );
 }
 
