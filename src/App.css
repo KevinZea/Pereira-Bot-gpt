@@ -120,6 +120,9 @@ body {
   border-radius: 20px;
   padding: 7px;
 }
+.chat-message span{
+  white-space: break-spaces;
+}
 .chat-foto img{
   width: 100%;
   height: 100%;
@@ -191,8 +194,7 @@ body {
 
 
 @media (display-mode: browser) {
-  .app{
-  }
+  
   .body-chat{
     height: 78% !important;
     /* padding-bottom: 8vh; */
@@ -270,11 +272,5 @@ body {
     /* position: absolute;
     top: 34vh;
     height: 58vh; */
-  }
-}
-@media screen and (max-height: 670px) {
-  .body-chat {
-    /* top: 38vh;
-    height: 54vh; */
   }
 }
