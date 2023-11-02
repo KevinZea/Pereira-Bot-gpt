@@ -216,6 +216,8 @@ body {
   color: white;
 }
 
+
+
 @media (max-width: 600px) {
   .app {
     display: block;
@@ -284,7 +286,13 @@ body {
   .body-chat{
     /* margin-top: 70%; */
     position: absolute;
-    top: 40vh;
-    height: 51vh;
+    top: 34vh;
+    height: 58vh;
+  }
+}
+@media screen and (max-height: 670px) {
+  .body-chat {
+    top: 38vh;
+    height: 54vh;
   }
 }
