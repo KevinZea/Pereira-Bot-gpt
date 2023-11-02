@@ -6,31 +6,26 @@ body {
   padding: 0;
   overflow-y: hidden;
 }
-
 .app {
   margin: 0;
   padding: 0;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
-
 .col-princ {
   background-color: rgb(0, 53, 6);
   width: 10%;
 }
-
 .col-title {
   width: 100%;
   padding: 5px;
   color: white;
   margin-top: 20px;
 }
-
 .col-title h1 {
   font-size: 24px;
 }
-
 .col-icons {
   color: white;
   display: flex;
@@ -38,14 +33,12 @@ body {
   width: 100%;
   align-items: center;
 }
-
 .col-icon-item {
   background-color: #008069;
   padding: 10px;
   border-radius: 100%;
   margin: 10px;
 }
-
 .col-publi {
   width: 20%;
   background-color: #008069;
@@ -54,15 +47,11 @@ body {
   align-items: center;
   border: 1px solid white;
 }
-
-
-
 .body {
   width: 70%;
   /* height: 100%; */
   flex: 1;
 }
-
 .body-head {
   display: flex;
   background-color: #008069;
@@ -73,10 +62,8 @@ body {
 .body-title img{
   width: 40px;
   height: 40px;
-
   border-radius: 100%;
 }
-
 .body-title {
   width: 80%;
   display: flex;
@@ -85,7 +72,6 @@ body {
   margin-left: 10px;
   align-items: center;
 }
-
 .body-icons {
   width: 20%;
   display: flex;
@@ -93,29 +79,23 @@ body {
   align-items: center;
   margin-right: 10px;
 }
-
 .body-title h1 {
   font-size: 22px;
   font-weight: normal;
   margin-left: 10px;
 }
-
 /* .body-icons-item {
-
 } */
-
 .body-container {
   width: 100%;
   height: 100%;
 }
-
 .body-chat {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
 .body-image {
   position: absolute;
   top: 0;
@@ -126,7 +106,6 @@ body {
   background-size: cover;
   z-index: -1;
 }
-
 .chat-container {
   width: 95%;
   display: flex;
@@ -141,7 +120,6 @@ body {
   border-radius: 20px;
   padding: 7px;
 }
-
 .chat-foto img{
   width: 100%;
   height: 100%;
@@ -158,7 +136,6 @@ body {
   margin-left: 5px;
   height: max-content;
 }
-
 .chat-container-user {
   display: flex;
   width: 100%;
@@ -172,7 +149,6 @@ body {
   border-radius: 20px;
   padding: 7px;
 }
-
 .chat-time-user {
   height: max-content;
   font-size: 13px;
@@ -181,7 +157,6 @@ body {
   font-size: 14px;
   margin-right:10px;
 }
-
 .inputs {
   background-color: rgba(0, 53, 6, 0);
   display: flex;
@@ -192,7 +167,6 @@ body {
   width: 70%;
   display: flex;
 }
-
 .inputs input {
   background-color: white;
   width: 85%;
@@ -200,7 +174,6 @@ body {
   border-radius: 25px;
   padding-left: 10px;
 }
-
 .input-audio {
   background-color: #008069;
   color: white;
@@ -208,7 +181,6 @@ body {
   border-radius: 100%;
   margin-left: 10px;
 }
-
 .input-send {
   background-color: #008069;
   padding: 5px;
@@ -216,21 +188,19 @@ body {
   margin-left: 10px;
   color: white;
 }
-
-
-
 @media (max-width: 600px) {
   .app {
     display: block;
     max-height: 100%;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     overflow-x: hidden;
   }
 
+    
+  
   .col-princ {
     display: none;
   }
-
   .body {
     display: flex;
     flex-direction: column;
@@ -238,7 +208,6 @@ body {
     height: 100%;
     max-height: 100%;
   }
-
   .body-head {
     /* position: absolute; */
     /* top: 0; */
@@ -251,7 +220,6 @@ body {
   .body-icons {
     left: 0;
   }
-
   .col-publi {
     display: none;
     /* width: 100%;
@@ -269,19 +237,15 @@ body {
     width: 100%;
     height: 100%;
   }
-
-
   .inputs {
     background-color: transparent;
     width: 100%;
   }
-
   .body-image {
     height: 100%;
     background-size: cover;
     background-repeat: repeat-y;
   }
-
   .body-container {
     overflow-y: scroll;
     overflow-x: hidden;
