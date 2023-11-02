@@ -223,7 +223,7 @@ body {
   .app {
     display: block;
     max-height: 100%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     overflow-x: hidden;
   }
 
